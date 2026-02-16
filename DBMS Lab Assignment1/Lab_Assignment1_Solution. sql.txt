@@ -1,0 +1,93 @@
+-- =========================================
+-- Oracle SQL*Plus Script
+-- CollegeDB : DDL + DML
+-- =========================================
+
+-- =====================
+-- PART A : DDL
+-- =====================
+
+-- 1. Create STUDENT table
+CREATE TABLE Student (
+    RollNo NUMBER,
+    Name VARCHAR2(50),
+    Dept VARCHAR2(20),
+    Age NUMBER,
+    Phone VARCHAR2(15)
+);
+
+-- 2. Create COURSE table
+CREATE TABLE Course (
+    CourseID NUMBER,
+    CourseName VARCHAR2(50),
+    Credits NUMBER
+);
+
+-- 3. Add City column
+ALTER TABLE Student
+ADD City VARCHAR2(30);
+
+-- 4. Add Semester column
+ALTER TABLE Student
+ADD Semester NUMBER;
+
+-- 5. Rename Phone to MobileNo
+ALTER TABLE Student
+RENAME COLUMN Phone TO MobileNo;
+
+-- 6. Drop Course table
+DROP TABLE Course;
+
+-- =====================
+-- PART B : DML
+-- =====================
+
+-- 9. Insert 5 student records (UPDATED DATA)
+INSERT INTO Student VALUES (201, 'Rahul', 'CSE', 20, '9001112233', 'Delhi', 3);
+INSERT INTO Student VALUES (202, 'Aman', 'EEE', 21, '9002223344', 'Patna', 4);
+INSERT INTO Student VALUES (203, 'Neha', 'CSE', 22, '9003334455', 'Ranchi', 5);
+INSERT INTO Student VALUES (204, 'Pooja', 'IT', 19, '9004445566', 'Kolkata', 2);
+INSERT INTO Student VALUES (205, 'Ravi', 'ME', 23, '9005556677', 'Gaya', 6);
+
+COMMIT;
+
+-- 10. Display all records
+SELECT * FROM Student;
+
+-- 11. Display RollNo and Name only
+SELECT RollNo, Name FROM Student;
+
+-- 12. Display students from CSE department
+SELECT * FROM Student
+WHERE Dept = 'CSE';
+
+-- 13. Display students whose age is greater than 20
+SELECT * FROM Student
+WHERE Age > 20;
+
+-- 14. Update department of RollNo = 201 to ECE
+UPDATE Student
+SET Dept = 'ECE'
+WHERE RollNo = 201;
+
+-- 15. Update city of Rahul to Patna
+UPDATE Student
+SET City = 'Patna'
+WHERE Name = 'Rahul';
+
+-- 16. Increase age of all students by 1
+UPDATE Student
+SET Age = Age + 1;
+
+-- 17. Delete record of RollNo = 205
+DELETE FROM Student
+WHERE RollNo = 205;
+
+-- 18. Delete all records from Student table (structure remains)
+DELETE FROM Student;
+
+COMMIT;
+
+-- =========================================
+-- END OF SQL*PLUS FILE
+-- =========================================
