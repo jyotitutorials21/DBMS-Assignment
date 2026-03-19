@@ -88,3 +88,25 @@ ____Learning Outcome____
 
 The completion of these laboratory experiments provided hands-on experience in SQL and relational database management.
 The practical knowledge gained forms a strong foundation for advanced database topics such as joins, normalization, indexing, triggers, and stored procedures.
+
+
+____ DBMS Lab6 – Data Aggregation (GROUP BY & HAVING)
+# Objective:-
+  To analyze and summarize data using SQL aggregate functions along with GROUP BY and HAVING clauses without modifying database data.
+
+# Concepts Covered
+1. Aggregate Functions: COUNT(), SUM(), AVG(), MAX(), MIN()
+2. GROUP BY for grouping data
+3. HAVING for filtering grouped results
+4. Aggregation with JOIN
+
+#Tasks Performed
+1. Count total students, faculty, and courses
+2. Group data by department, semester, and grade
+3. Filter grouped data using HAVING
+4. Perform aggregation using JOIN
+5. Generate analytical reports (max grade, course count, enrollments)
+
+____ Outcome____
+1. Learned how to summarize, group, and analyze relational data efficiently using SQL.
+2..If you want even shorter (2–3 lines for description), tell me 👍
